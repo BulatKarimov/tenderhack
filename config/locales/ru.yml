@@ -1,0 +1,5 @@
+ru:
+  error:
+    offer:
+      image_required: 'Нет изображения. Выберите изображение'
+      unavailable_content_type: 'Не допустимый формат файла. Только JPEG/JPG/PNG'
