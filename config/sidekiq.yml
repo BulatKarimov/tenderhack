@@ -1,0 +1,15 @@
+---
+:verbose: true
+:concurrency: 4
+:daemon: false
+:queues:
+  - [default, 5]
+production:
+  :concurrency: 6
+  :verbose: false
+staging:
+  :concurrency: 4
+  :verbose: false
+development:
+  :concurrency: 1
+  :verbose: true
