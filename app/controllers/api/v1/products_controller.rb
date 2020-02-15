@@ -1,4 +1,4 @@
-class Api::V1::OffersController < Api::V1::ApplicationController
+class Api::V1::ProductsController < Api::V1::ApplicationController
 
   def search
     result = Offer::FindByImage.call(offer_params)
