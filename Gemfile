@@ -48,7 +48,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "interactor-rails", "~> 2.0"
 gem "roo", "~> 2.8.0"
 
-gem 'sidekiq'
+gem 'sidekiq', '5.2.7'
 
 # Deploy
 gem 'capistrano', '~> 3.10.2'
