@@ -1,4 +1,4 @@
-class Offer::FetchData
+class Product::FetchData
   include Interactor
 
   def call

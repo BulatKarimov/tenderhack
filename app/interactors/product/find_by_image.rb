@@ -1,6 +1,6 @@
-class Offer::FindByImage
+class Product::FindByImage
   include Interactor::Organizer
 
   # TODO some shit after FetchData from python neural network
-  organize Offer::ValidateParams, Offer::FetchData
+  organize Product::ValidateParams, Product::FetchData
 end

@@ -49,3 +49,11 @@ gem "interactor-rails", "~> 2.0"
 gem "roo", "~> 2.8.0"
 
 gem 'sidekiq'
+
+# Deploy
+gem 'capistrano', '~> 3.10.2'
+gem 'capistrano-rails', '~> 1.2'
+gem 'capistrano3-puma'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv'
+gem 'capistrano-sidekiq'

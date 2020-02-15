@@ -1,9 +1,9 @@
-class Offer::ValidateParams
+class Product::ValidateParams
   include Interactor
 
   before do
     unless context.image.present?
-      context.fail!(error: error('error.offer.image_required'),
+      context.fail!(error: error('error.product.image_required'),
                     status: :unprocessable_entity)
     end
   end
@@ -12,7 +12,7 @@ class Offer::ValidateParams
 
   def call
     unless content_type.include?('image')
-      context.fail!(error: error('error.offer.unavailable_content_type?'),
+      context.fail!(error: error('error.product.unavailable_content_type?'),
                     status: :unprocessable_entity)
     end
   end

@@ -34,7 +34,8 @@ class DatabaseTransferWorker
     data = data == 'NULL' ? nil : data
 
     return data.to_f if number
-    return data
+
+    data
   end
 
   def id(data)
