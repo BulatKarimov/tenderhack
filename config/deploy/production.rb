@@ -11,6 +11,7 @@ set :rails_env, 'production'
 # Sidekiq
 set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 set :sidekiq_env, 'production'
+set :linked_files, %w{config/master.key}
 
 
 # server-based syntax
