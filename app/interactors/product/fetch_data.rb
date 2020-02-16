@@ -35,7 +35,7 @@ class Product::FetchData
   end
 
   def tmp_path
-    context.image.tempfile.path
+    context.image.path
   end
 
   def encoded_file
