@@ -25,7 +25,7 @@ class Api::V1::ProductsController < Api::V1::ApplicationController
     result = Product::FindByImage.call(product_params)
 
     if result.success?
-      render json: { similiar: context.similiar_product, result: context.result_product },
+      render json: { similiar: result.similiar_product, result: result.result_product },
              status: :ok
     else
       render json: result.error, status: result.status
