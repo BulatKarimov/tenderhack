@@ -36,5 +36,19 @@ module Tenderhack
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins /https?:\/\/(.*?).sputnik.systems/,
+                'http://localhost:3000',
+                'http://localhost:3001',
+                'http://localhost:3002',
+                '192.168.1.*:3000',
+                '192.168.0.154:3000'
+        resource '*',
+                 credentials: true,
+                 headers: :any,
+                 methods: [:get, :post, :delete, :put, :patch, :options, :head]
+      end
   end
 end
