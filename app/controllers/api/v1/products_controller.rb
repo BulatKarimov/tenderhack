@@ -35,7 +35,7 @@ class Api::V1::ProductsController < Api::V1::ApplicationController
 
   def product_params
     {
-      image: params[:image]
+      image: params[:image].tempfile
     }
   end
 end
