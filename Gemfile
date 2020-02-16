@@ -50,6 +50,8 @@ gem "roo", "~> 2.8.0"
 
 gem 'sidekiq', '5.2.7'
 
+gem 'active_model_serializers', '~> 0.10.0'
+
 # Deploy
 gem 'capistrano', '~> 3.10.2'
 gem 'capistrano-rails', '~> 1.2'

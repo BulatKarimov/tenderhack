@@ -19,7 +19,7 @@ class AttachImageToProductWorker
       image_path = image_paths.select { |path| path if path.include?(product.id.to_s) }
       next unless image_path.present?
 
-      product.image.attach(io: File.open(image_path), filename: "#{product.id}.jpg")
+      file = File.rename(image_path.first, "#{base_path}/#{product.id}.jpg")
     end
   end
 
