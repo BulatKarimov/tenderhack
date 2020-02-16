@@ -19,15 +19,15 @@ class Api::V1::ProductsController < Api::V1::ApplicationController
     end
   end
 
-  def search
-    result = Product::FindByImage.call(product_params)
-
-    if result.success?
-      render json: result.products, each_serializer: ProductsSerializer, status: :ok
-    else
-      render json: result.error, status: result.status
-    end
-  end
+  # def search
+  #   result = Product::FindByImage.call(product_params)
+  #
+  #   if result.success?
+  #     render json: result.products, each_serializer: ProductsSerializer, status: :ok
+  #   else
+  #     render json: result.error, status: result.status
+  #   end
+  # end
 
   private
 

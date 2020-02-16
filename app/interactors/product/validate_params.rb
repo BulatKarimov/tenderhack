@@ -11,7 +11,7 @@ class Product::ValidateParams
 
 
   def call
-    unless content_type.include?('image')
+    unless context.image.content_type.include?('image')
       context.fail!(error: error('error.product.unavailable_content_type?'),
                     status: :unprocessable_entity)
     end
