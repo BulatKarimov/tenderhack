@@ -49,6 +49,7 @@ module Tenderhack
                  credentials: true,
                  headers: :any,
                  methods: [:get, :post, :delete, :put, :patch, :options, :head]
+        end
       end
   end
 end
