@@ -12,10 +12,10 @@ class Product::FetchData
 
     predicts = response.parsed_response['msg']
 
-    predicts.each do |predict|
-      Product.where(id: predict.ids)
+    ids = []
+    predicts.each { |predict| ids <<  predict['ids'] }
 
-    end
+    context.products = Product.where(id: ids)
   end
 
   private
