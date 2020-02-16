@@ -2,6 +2,8 @@ class Api::V1::ProductsController < Api::V1::ApplicationController
 
   def index
     products = Product.search(params[:query])
+                      .page(params[:page] || 0)
+                      .per(params[:limit] || 25)
 
     render json: products, each_serializer: ProductListSerializer,
            status: :ok

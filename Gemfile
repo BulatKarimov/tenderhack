@@ -53,6 +53,7 @@ gem 'sidekiq', '5.2.7'
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'httparty'
+gem 'kaminari'
 
 # Deploy
 gem 'capistrano', '~> 3.10.2'
