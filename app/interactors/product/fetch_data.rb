@@ -18,7 +18,7 @@ class Product::FetchData
     similiar.each { |s| similiar_ids << s.last }
     result.each { |r| result_ids << r.last }
 
-    context.semiliar_products = Product.where(id: similiar_ids)
+    context.similiar_products = Product.where(id: similiar_ids)
     context.result_products = Product.where(id: result_ids)
   end
 
