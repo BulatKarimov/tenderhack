@@ -10,12 +10,16 @@ class Product::FetchData
       context.fail!(error: error, status: :unprocessable)
     end
 
-    predicts = response.parsed_response['msg']
+    similiar = response.parsed_response['msg']
+    result = response.parsed_response['msg_filtered']
+    similiar_ids = []
+    result_ids = []
 
-    ids = []
-    predicts.each { |predict| ids <<  predict.last }
+    similiar.each { |s| similiar_ids << s.last }
+    result.each { |r| result_ids << r.last }
 
-    context.products = Product.where(id: ids)
+    context.semiliar_products = Product.where(id: similiar_ids)
+    context.result_products = Product.where(id: result_ids)
   end
 
   private
