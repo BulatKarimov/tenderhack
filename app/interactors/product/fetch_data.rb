@@ -13,7 +13,7 @@ class Product::FetchData
     predicts = response.parsed_response['msg']
 
     ids = []
-    predicts.each { |predict| ids <<  predict['ids'] }
+    predicts.each { |predict| ids <<  predict.last }
 
     context.products = Product.where(id: ids)
   end
